@@ -1,0 +1,19 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': likes > 0,
+                'list-group-item-danger': likes < 0}">
+  <div>
+    <h4 style="display: inline-block;">{{title}}</h4>
+    <p style="float: right;">{{ creationDate | date: 'MM/dd/yyyy, h:mm a'}}</p>
+    <p>{{content}}</p>
+    <div class="btn-toolbar">
+      <button class="btn btn-success" (click)="like()">
+        Like
+      </button>
+      <button class="btn btn-danger" (click)="dislike()">
+        Dislike
+      </button>
+    </div>
+
+  </div>
+
+</li>
